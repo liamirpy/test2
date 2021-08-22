@@ -35,7 +35,7 @@ sleep(3)
 model = mask.get_model('unet','LTRCLobes')
 health_part = mask.apply(input_image, model)
 health_result=rotate_output(health_part)
-img = nib.Nifti1Image(hole_result, original.affine)
+img = nib.Nifti1Image(health_result, original.affine)
 health_result_name=INPUT.split('.nii')[0] + '_health.nii'
 nib.save(img,health_result_name)
 sleep(3)
