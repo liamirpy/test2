@@ -29,7 +29,7 @@ hole_result=rotate_output(hole_part)
 
 img = nib.Nifti1Image(hole_result, original.affine)
 hole_result_name=INPUT.split('.nii')[0] + '_hole.nii'
-nib.save(img,hole_result_name)
+#nib.save(img,hole_result_name)
 sleep(3)
 ########
 model = mask.get_model('unet','LTRCLobes')
